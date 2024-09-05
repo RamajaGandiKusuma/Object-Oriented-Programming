@@ -15,16 +15,15 @@ public class Main {
         System.out.println("     Ilmu Alam");
         System.out.println("====================");
         
-        IlmuAlamTerapan tkim = new IlmuAlamTerapan();
-        tkim.setNamaCabangIlmu("Teknik Kimia");
-        tkim.setMetodologi("merancang, mengembangkan, dan mengoptimalkan proses kimia serta industri yang melibatkan bahan kimia.");
-        tkim.setObjekKajian("desain, analisis, dan pengoperasian proses pada bahan kimia");
-        tkim.setSkalaFenomena("skala molekuler hingga skala industri");
+        IlmuAlam kim = new IlmuAlam();
+        RumpunIlmu ri = (RumpunIlmu) kim;
+        ri.setNamaCabangIlmu("Ilmu Alam & Ilmu Formal");
+        ri.setMetodologi("Observasi, hipotesis, pengumpulan data, dan pengujian.");
+        ri.setObjekKajian("Fisika, Kimia, Biologi, Matematika dan Ilmu Komputer");
         
-        System.out.println("Nama Cabang Ilmu: "+tkim.getNamaCabangIlmu());
-        System.out.println("Metodologi Cabang Ilmu: "+tkim.getMetodologi());
-        System.out.println("Objek Kajian Ilmu: "+tkim.getObjekKajian());
-        System.out.println("Skala Fenomena Ilmu: "+tkim.getSkalaFenomena());
+        System.out.println("Nama Cabang Ilmu: "+ri.getNamaCabangIlmu());
+        System.out.println("Metodologi Cabang Ilmu: "+ri.getMetodologi());
+        System.out.println("Objek Kajian Ilmu: "+ri.getObjekKajian());
         System.out.println("\n\n");
         
         IlmuAlamMurni fis = new IlmuAlamMurni();
