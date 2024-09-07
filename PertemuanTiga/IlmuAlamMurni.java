@@ -11,8 +11,13 @@ package PertemuanTiga;
 public class IlmuAlamMurni extends IlmuAlam{
     public void identitas(String nama, String objek){
         super.ilmuAlamMurni();
+        this.bidangAlamMurni();
         super.namaCabang(nama);
         super.objekKajian(objek);   
+    }
+
+     public void bidangAlamMurni(){
+        System.out.println("Ilmu alam murni adalah cabang ilmu pengetahuan yang berfokus pada studi tentang fenomena alam dan hukum-hukum dasar yang mengatur alam semesta.");
     }
     
     public void profesi(String spesialis){
