@@ -11,8 +11,13 @@ package PertemuanTiga;
 public class IlmuAlamTerapan extends IlmuAlam {
     public void identitas(String nama, String objek){
         super.ilmuAlamTerapan();
+        this.bidangAlamTerapan();
         super.namaCabang(nama);
         super.objekKajian(objek);
+    }
+
+    public void bidangAlamTerapan(){
+        System.out.println("Ilmu alam terapan adalah cabang ilmu yang menerapkan prinsip-prinsip dan teori-teori dasar dari ilmu alam (seperti fisika, kimia, biologi) untuk memecahkan masalah praktis di kehidupan sehari-hari.");
     }
     
     public void profesi(String spesialis){
