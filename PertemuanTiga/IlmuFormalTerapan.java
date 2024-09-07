@@ -10,9 +10,14 @@ package PertemuanTiga;
  */
 public class IlmuFormalTerapan extends IlmuFormal{
     public void identitas(String nama, String objek){
-        super.ilmuFormalTerapan();
+        super.bidangFormalTerapan();
+        this.bidangFormalTerapan();
         super.namaCabang(nama);
         super.objekKajian(objek);
+    }
+
+    public void bidangFormalTerapan(){
+        System.out.println("Ilmu formal terapan adalah cabang ilmu yang menerapkan teori-teori formal, seperti matematika, logika, dan ilmu komputer.");
     }
     
     public void profesi(String spesialis){
