@@ -10,10 +10,16 @@ package PertemuanTiga;
  */
 public class IlmuFormalMurni extends IlmuFormal {
     public void identitas(String nama, String objek){
-        super.ilmuFormalMurni();
+        super.bidangFormalMurni();
+        this.bidangFormalMurni();
         super.namaCabang(nama);
         super.objekKajian(objek);
     }
+
+     public void bidangFormalMurni(){
+        System.out.println("Ilmu formal murni adalah cabang matematika yang berfokus pada pengembangan teori dan konsep matematika tanpa mempertimbangkan penerapan praktisnya.");
+    }
+
     
     public void profesi(String spesialis){
         System.out.println("Profesi sebagai ilmuwan atau peneliti dibidang: "+spesialis);
