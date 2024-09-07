@@ -25,11 +25,11 @@ public class IlmuFormal extends RumpunIlmu{
         System.out.println("Objek kajian ilmu: "+objek);
     }
     
-    public void ilmuFormalMurni(){
+    public void bidangFormalMurni(){
         System.out.println("Ini ilmu formal murni");
     }
     
-    public void ilmuFormalTerapan(){
+    public void bidangFormalTerapan(){
         System.out.println("Ini ilmu formal terapan");
     }
     
