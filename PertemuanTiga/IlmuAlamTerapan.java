@@ -10,7 +10,7 @@ package PertemuanTiga;
  */
 public class IlmuAlamTerapan extends IlmuAlam {
     public void identitas(String nama, String objek){
-        super.ilmuAlamTerapan();
+        super.bidangAlamTerapan();
         this.bidangAlamTerapan();
         super.namaCabang(nama);
         super.objekKajian(objek);
