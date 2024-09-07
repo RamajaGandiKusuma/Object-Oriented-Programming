@@ -25,11 +25,11 @@ public class IlmuAlam extends RumpunIlmu{
         System.out.println("Objek Kajian ilmu: "+objek);
     }
     
-    public void ilmuAlamMurni(){
+    public void bidangAlamMurni(){
         System.out.println("Ini ilmu alam murni");
     }
     
-    public void ilmuAlamTerapan(){
+    public void bidangAlamTerapan(){
         System.out.println("Ini ilmu alam terapan");
     }
 
