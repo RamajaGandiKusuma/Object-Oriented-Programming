@@ -296,21 +296,8 @@ public class Mahasiswa {
 ```
 Pada bagian _main_ ini dibuat ketika dirunning akan muncul berbagai pertanyaan dan pilihan. Pilihan - pilah tersebut berisi perintah - perintah entah itu _Create, Read, Update, Delete_. Source code ini terstruktur menggunakan IfElseIfStatement.
 
-# HASIL
-   ## Create 
-   ![alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-09-14%20233713.png?raw=true)
+__________________________________________________________________________________________________________________________________________________
 
-   ## Read
-   ![alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-09-15%20165156.png?raw=true)
-
-   ## Update
-   ![alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-09-15%20165447.png?raw=true)
-
-   ## Delete
-   ![alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-09-15%20165627.png?raw=true)
-   ![alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-09-15%20165649.png?raw=true)
-
-##__________________________________________________________________________________________________________________________________________________
 
 # **Try Catch & Throw **
 ## Pada materi ini menerapkan operasi Try Catch & Throw sederhana dengan menggunakan IDE Netbeans bahasa java.
