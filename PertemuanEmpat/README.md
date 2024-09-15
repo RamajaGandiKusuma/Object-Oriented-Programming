@@ -99,5 +99,81 @@ public class Read extends Koneksi {
     }
  }
  ```
+## 4. UpdateData Class
+   Pada Class ini berisi source code untuk mengubah data - data yang ada dalam entitas mahasiswa atau menerapkan operasi _Update_. Didalam UpdateData Class juga mingimport class sql dari JDBC untuk menggunakan method PreparedStatement.
+   ```java
+import java.sql.*;
+public class UpdateData extends Koneksi{
+    
+        public void updateNIM(String namaBaru, String nim){  // Method untuk Update nim suatu record
+        try{
+            String sql = "UPDATE mahasiswa SET nim=? WHERE nim =? ";
+            PreparedStatement tampil = connection.prepareStatement(sql);
+            
+            tampil.setString(1, namaBaru);
+            tampil.setString(2, nim);
+            
+            int jalankan = tampil.executeUpdate();
+            System.out.println("Pembaruan Data Telah Berhasil");
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Pembaruan Data Gagal");
+        }
+        
+    }
+    
+    public void updateNama(String namaBaru, String nim){   // Method untuk Update nama suatu record
+        try{
+            String sql = "UPDATE mahasiswa SET nama=? WHERE nim =? ";
+            PreparedStatement tampil = connection.prepareStatement(sql);
+            
+            tampil.setString(1, namaBaru);
+            tampil.setString(2, nim);
+            
+            int jalankan = tampil.executeUpdate();
+            System.out.println("Pembaruan Data Telah Berhasil");
+        }catch(SQLException ex){
+            ex.printStackTrace();
+            System.out.println("Pembaruan Data Gagal");
+        }
+        
+    }
+    
+       public void updateFakultas(String fakultasBaru, String nim){    // Method untuk Update fakultas suatu record
+        try{
+            String sql = "UPDATE mahasiswa SET fakultas=? WHERE nim =? ";
+            PreparedStatement tampil = connection.prepareStatement(sql);
+            
+            tampil.setString(1, fakultasBaru);
+            tampil.setString(2, nim);
+            
+            int jalankan = tampil.executeUpdate();
+            System.out.println("Pembaruan Data Telah Berhasil");
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Pembaruan Data Gagal");
+        }
+        
+    }
+    
+    public void updateProdi(String prodiBaru, String nim){          // Method untuk Update prodi suatu record
+        try{
+            String sql = "UPDATE mahasiswa SET prodi=? WHERE nim =? ";
+            PreparedStatement tampil = connection.prepareStatement(sql);
+            
+            tampil.setString(1, prodiBaru);
+            tampil.setString(2, nim);
+            
+            int jalankan = tampil.executeUpdate();
+            System.out.println("Pembaruan Data Telah Berhasil");
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Pembaruan Data Gagal");
+        }
+        
+    }
+    
+}
+```
   
 
