@@ -20,3 +20,32 @@
    ## 2. InputData Class
    Pada Class ini berisi source code untuk menginput data dalam entitas mahasiswa atau menerapkan operasi _Create_. Didalam InputData Class ini juga mingimport class sql dari JDBC untuk menggunakan method PreparedStatement.
    ![alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-09-15%20135522.png?raw=true)
+
+   Didalam InputData memiliki method input yang memuat parameter nim, nama, prodi dan fakultas bertipe data String. Parameter tersebut akan menjadi perwakilan Field yang ada didalam entitas mahasiswa. Query untuk menginput data di database diwakilkan menggunakan variabel sql yang bertipe data String. Terdapat variabel jalankan bertipe data int untuk menjalankan query yang diwakilkan oleh variabel sql.
+
+   ## 3. Read Class
+   Pada Class ini berisi source code untuk menampilkan data - data yang telah di input atau menerapkan operasi _Read_. Didalam InputData Class ini juga mingimport class sql dari JDBC untuk menggunakan method createStatement.
+   ```java
+   import java.sql.*;
+
+public class Read extends Koneksi {
+    public void tampilkan(){
+        try{
+           String sql = "SELECT * FROM mahasiswa";
+           Statement tampil = connection.createStatement();
+           ResultSet jalankan = tampil.executeQuery(sql);
+           
+           while(jalankan.next()){
+               System.out.println("NIM : "+jalankan.getObject(1));
+               System.out.println("NAMA : "+jalankan.getObject(2));
+               System.out.println("FAKULTAS : "+jalankan.getObject(4));
+               System.out.println("PROGRAM STUDI : "+jalankan.getObject(3)+"\n");
+           }
+           
+            System.out.println("Data Sukses Ditampilkan");
+        }catch(Exception e){
+            System.out.println("Data Tidak Dapat Ditampilkan");
+        }
+    }
+ }
+
