@@ -4,7 +4,7 @@
 
 ## A. DATABASE
    Didalam Database Postgresql hanya terdapat satu entitas yaitu mahasiswa.
-   ![Screenshot](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/tree/main/Pict%20GITHUB)
+   ![alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/tree/main/Pict%20GITHUB?raw=true)
    Didalam entitas mahasiswa memiliki beberapa atribut yaitu.
       1. nim
          NIM disini menjadi PRIMARY KEY dari setiap mahasiswa yang bertipe data char dan constrains NOT NULL.
