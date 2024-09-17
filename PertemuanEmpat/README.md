@@ -186,106 +186,138 @@ import java.sql.*;
 
 public class HapusData extends Koneksi {
     
-    public HapusData(){
+    public void hapusSemua(){
          try{
         String sql = "DELETE FROM mahasiswa";
         PreparedStatement hapus = connection.prepareStatement(sql);
         int jalankan = hapus.executeUpdate();
             System.out.println("Data Berhasil Dihapus.\n");
         }catch(Exception e){
-             System.out.println("Data Gagal Dihapus");
+             System.out.println("Data Gagal Dihapus\n");
+        }
+    }
+    
+    public void hapusSatuData(String nim){
+        try{
+            String sql = "DELETE FROM mahasiswa WHERE nim = ?";
+            PreparedStatement hapus = connection.prepareStatement(sql);
+            
+            hapus.setString(1, nim);
+            
+            int jalankan = hapus.executeUpdate();
+            System.out.println("Data Berhasil Dihapus\n");
+        }catch(Exception e){
+            System.out.println("Data Gagal Dihapus\n");
         }
     }
 }
+
 ```
    Pada Class HapusData, source code untuk menghapus semua data diterapkan dalam konstruktor.
 
 ## 6. Mahasiswa Class
    Pada Class ini berisi source code untuk menerapkan semua method - method yang ada dalam 5 Class tersebut. Class Mahasiswa ini bisa disebut juga sebagai main class. Agar Class UpdateData dapat terhubung dengan database mahasiswa, Class UpdateData terhubung atau extends dengan Class Koneksi.
    ```java
-import java.util.Scanner;
+package PertemuanEmimport
 
-/**
- *
- * @author RAMAJA
- */
+java.util.Scanner;
+
 public class Mahasiswa {
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         InputData masukan = new InputData();
+        HapusData hps = new HapusData();
         Read tampil = new Read();
         UpdateData ubah = new UpdateData();
-        String a,b,c,d;
-        
+        String a, b, c, d;
+
         System.out.println("Pilih Operasi: \n1. Menginput Data \n2. Menampilkan Data\n3. Hapus Data\n4. Mengubah Data Yang Telah Ada");
         System.out.println("Pilihan Anda: ");
         int e = input.nextInt();
-            if(e==1){  // Jika memilih 1 maka akan berisi perintah untuk mengisi data
+        if (e == 1) {
+            input.nextLine();
+            System.out.println("Masukan NIM mahasiswa: ");
+            a = input.nextLine();
+            System.out.println("Masukan Nama Mahasiswa: ");
+            b = input.nextLine();
+            System.out.println("Masukan Program Studi Mahasiswa: ");
+            c = input.nextLine();
+            System.out.println("Masukan Fakultas Mahasiswa: ");
+            d = input.nextLine();
+            masukan.Input(a, b, c, d);
+            main(args);
+        } else if (e == 2) {
+            tampil.tampilkan();
+            main(args);
+        } else if (e == 3) {
+            input.nextLine();
+            System.out.println("Masukan Pilihan Anda:\n1. Hapus Semua Data\n2. Hapus beberapa data");
+            System.out.println("Pilihan Anda: ");
+            e = input.nextInt();
+            if (e == 1) {
                 input.nextLine();
-                System.out.println("Masukan NIM mahasiswa: ");
-                a=input.nextLine();
-                System.out.println("Masukan Nama Mahasiswa: ");
-                b=input.nextLine();
-                System.out.println("Masukan Program Studi Mahasiswa: ");
-                c=input.nextLine();
-                System.out.println("Masukan Fakultas Mahasiswa: ");
-                d=input.nextLine();
-                masukan.Input(a, b, c, d);
-            }else if(e==2){ // Jika memilih 2 maka akan berisi perintah untuk menampilkan data
-                   tampil.tampilkan();
-            }else if(e==3){ // Jika memilih 3 maka akan berisi perintah untuk menghapus data
-                    HapusData hapus = new HapusData();
-            }else if(e==4){ // Jika memilih 4 maka akan menampilkan macam - macam pilihan untuk mengubah kolom pada setiap baris
-                System.out.println("Apakah Anda Ingin Merubah Data NIM?\n1. IYA\n2. TIDAK");
+                hps.hapusSemua();
+            } else if (e == 2) {
+                input.nextLine();
+                System.out.println("Masukan NIM Yang Ingin Anda Hapus: ");
+                a = input.nextLine();
+                hps.hapusSatuData(a);
+                main(args);
+            }
+        } else if (e == 4) {
+            System.out.println("Apakah Anda Ingin Merubah Data NIM?\n1. IYA\n2. TIDAK");
+            System.out.println("Pilihan Anda: ");
+            e = input.nextInt();
+            if (e == 1) {
+                input.nextLine();
+                System.out.println("Masukan NIM Yang Ingin Anda Ubah: ");
+                a = input.nextLine();
+                System.out.println("Masukan NIM Yang Baru: ");
+                b = input.nextLine();
+                ubah.updateNIM(b, a);
+                main(args);
+            } else if (e == 2) {
+                input.nextLine();
+                System.out.println("Apakah Anda Ingin Merubah Data Nama?\n1. IYA\n2. TIDAK");
                 System.out.println("Pilihan Anda: ");
-                e=input.nextInt(); 
-                if(e==1){
+                e = input.nextInt();
+                if (e == 1) {
                     input.nextLine();
                     System.out.println("Masukan NIM Yang Ingin Anda Ubah: ");
-                    a=input.nextLine();
+                    a = input.nextLine();
+                    System.out.println("Masukan Nama Yang Baru: ");
+                    b = input.nextLine();
+                    ubah.updateNama(b, a);
+                    main(args);
+                } else if (e == 2) {
                     input.nextLine();
-                    System.out.println("Masukan NIM Yang Baru: ");
-                    b=input.nextLine();
-                    ubah.updateNIM(a, b);
-                    }else if(e==2){
+                    System.out.println("Apakah Anda Ingin Merubah Data Fakultas?\n1. IYA\n2. TIDAK");
+                    System.out.println("Pilihan Anda: ");
+                    e = input.nextInt();
+                    if (e == 1) {
                         input.nextLine();
-                        System.out.println("Apakah Anda Ingin Merubah Data Nama?\n1. IYA\n2. TIDAK");
+                        System.out.println("Masukan NIM Yang Ingin Anda Ubah: ");
+                        a = input.nextLine();
+                        System.out.println("Masukan Fakultas Yang Baru: ");
+                        b = input.nextLine();
+                        ubah.updateFakultas(b, a);
+                        main(args);
+                    } else if (e == 2) {
+                        input.nextLine();
+                        System.out.println("Apakah Anda Ingin Merubah Data Prodi?\n1. IYA\n2. TIDAK");
                         System.out.println("Pilihan Anda: ");
-                        e=input.nextInt(); 
-                           if(e==1){
+                        e = input.nextInt();
+                        if (e == 1) {
                             input.nextLine();
                             System.out.println("Masukan NIM Yang Ingin Anda Ubah: ");
-                            a=input.nextLine();
-                            System.out.println("Masukan Nama Yang Baru: ");
-                            b=input.nextLine();
-                            ubah.updateNama(b, a);
-                           }else if(e==2){
-                               input.nextLine();
-                               System.out.println("Apakah Anda Ingin Merubah Data Fakultas?\n1. IYA\n2. TIDAK");
-                               System.out.println("Pilihan Anda: ");
-                               e=input.nextInt(); 
-                               if(e==1){
-                                   input.nextLine();
-                                   System.out.println("Masukan NIM Yang Ingin Anda Ubah: ");
-                                   a=input.nextLine();
-                                   input.nextLine();
-                                   System.out.println("Masukan Fakultas Yang Baru: ");
-                                   b=input.nextLine();
-                                   ubah.updateFakultas(b, a);
-                               }else if(e==2){
-                                   input.nextLine();
-                                   System.out.println("Apakah Anda Ingin Merubah Data Prodi?\n1. IYA\n2. TIDAK");
-                                   System.out.println("Pilihan Anda: ");
-                                   e=input.nextInt(); 
-                                   if(e==1){
-                                       input.nextLine();
-                                       System.out.println("Masukan NIM Yang Ingin Anda Ubah: ");
-                                       a=input.nextLine();
-                                       System.out.println("Masukan Prodi Yang Baru: ");
-                                       b=input.nextLine();
-                                       ubah.updateProdi(b, a);
-                                   }else if(e==2){
-                                       System.out.println("Terima Kasih");
+                            a = input.nextLine();
+                            System.out.println("Masukan Prodi Yang Baru: ");
+                            b = input.nextLine();
+                            ubah.updateProdi(b, a);
+                            main(args);
+                        } else if (e == 2) {
+                            System.out.println("Terima Kasih");
                         }
                     }
                 }
@@ -293,6 +325,7 @@ public class Mahasiswa {
         }
     }
 }
+
 ```
 Pada bagian _main_ ini dibuat ketika dirunning akan muncul berbagai pertanyaan dan pilihan. Pilihan - pilah tersebut berisi perintah - perintah entah itu _Create, Read, Update, Delete_. Source code ini terstruktur menggunakan IfElseIfStatement.
 
@@ -314,31 +347,14 @@ public class TryCatchStudy {
                 System.out.println("Nilai ke-"+(i+1)+":"+nilai[i]);
             }
         }catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Perintah Anda salah karena "+e.getMessage());
+            e.printStackTrace();
         }
     }
 }
-
 ```
 ## ThrowStudy Class
    Pada Class ini terdapat fungsi IfElseStatement untuk menyeleksi nilai yang masuk. Jika nilai yang di masukan tidak melebihi nilai minimum maka akan muncul Exception yang telah disetting sebelumnya pada fungsi nilai.
    ```java
-public class ThrowStudy {
-    
-    public int nilai(int a) throws ArithmeticException { 
-        if(a<=75){
-            throw new ArithmeticException("Anda Tidak Lulus"); //ArithmeticException Disetting untuk menampilkan 
-        }else{
-            System.out.println("Anda Lulus");
-        }
-        return a;
-    }
-    
-    public static void main(String[] args) {
-        ThrowStudy thr = new ThrowStudy();
-        thr.nilai(97);
-    }
-}
 
 ```
 
