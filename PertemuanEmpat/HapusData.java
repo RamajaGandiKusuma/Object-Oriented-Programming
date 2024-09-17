@@ -1,21 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package PertemuanEmpat;
 
 import java.sql.*;
 
 public class HapusData extends Koneksi {
     
-    public HapusData(){
+    public void hapusSemua(){
          try{
         String sql = "DELETE FROM mahasiswa";
         PreparedStatement hapus = connection.prepareStatement(sql);
         int jalankan = hapus.executeUpdate();
             System.out.println("Data Berhasil Dihapus.\n");
         }catch(Exception e){
-             System.out.println("Data Gagal Dihapus");
+             System.out.println("Data Gagal Dihapus\n");
+        }
+    }
+    
+    public void hapusSatuData(String nim){
+        try{
+            String sql = "DELETE FROM mahasiswa WHERE nim = ?";
+            PreparedStatement hapus = connection.prepareStatement(sql);
+            
+            hapus.setString(1, nim);
+            
+            int jalankan = hapus.executeUpdate();
+            System.out.println("Data Berhasil Dihapus\n");
+        }catch(Exception e){
+            System.out.println("Data Gagal Dihapus\n");
         }
     }
 }
