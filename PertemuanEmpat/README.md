@@ -355,7 +355,95 @@ public class TryCatchStudy {
 ## ThrowStudy Class
    Pada Class ini terdapat fungsi IfElseStatement untuk menyeleksi nilai yang masuk. Jika nilai yang di masukan tidak melebihi nilai minimum maka akan muncul Exception yang telah disetting sebelumnya pada fungsi nilai.
    ```java
+import java.util.Scanner;
 
+/**
+ *
+ * @author RAMAJA
+ */
+public class ThrowStudy {
+
+    public static void pilihMatrixs(int matriks [][], int baris, int kolom ) throws ArrayIndexOutOfBoundsException {
+           if(baris!=0||kolom!=0){
+            int nilai=matriks[baris-1][kolom-1];
+            System.out.println("Nilai: "+nilai);
+           }else{
+               throw new ArrayIndexOutOfBoundsException("BARIS DAN KOLOM YANG ANDA MASUKAN SALAH");
+           }
+            
+    }
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+          int matrx [][]={
+              {2, 4, 6},
+              {8, 10, 12},
+              {14, 16, 18}
+          };
+        
+        System.out.println("INI MATRIKS 3X3");
+        System.out.println("Pilih baris ke: ");
+        int a=input.nextInt();
+        System.out.println("Pilih kolom ke: ");
+        int b=input.nextInt();
+        pilihMatrixs(matrx,a,b);
+  
+    }
+}
+
+```
+## CustomeException Class
+   Pada Class ini terdapat exception yang bernama RamajiError, dimana tujuanya kita dapat membuat exception kita sendiri.
+   ```java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package PertemuanEmpat;
+
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author RAMAJA
+ */
+public class RamajiError extends ArrayIndexOutOfBoundsException {
+
+    public RamajiError(String s) {
+        super(s);
+    }
+
+    public static void pilihMatrixs(int matriks[][], int baris, int kolom) throws RamajiError {
+        try {
+            int nilai = matriks[baris - 1][kolom - 1];
+            System.out.println("Nilai: " + nilai);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new RamajiError("Ada yang salah abangku");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int matrx[][] = {
+            {2, 4, 6},
+            {8, 10, 12},
+            {14, 16, 18}
+        };
+
+        System.out.println("INI MATRIKS 3X3");
+        System.out.println("Pilih baris ke: ");
+        int a = input.nextInt();
+        System.out.println("Pilih kolom ke: ");
+        int b = input.nextInt();
+
+        try {
+            pilihMatrixs(matrx, a, b);
+        } catch (RamajiError e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
 ```
 
 
