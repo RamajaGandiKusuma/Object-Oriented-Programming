@@ -263,7 +263,7 @@ public class GUIMahasiswa extends javax.swing.JFrame {
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
         a = tfnim.getText();
 
-        if (a.equals("")) {
+        if (a.trim().isEmpty()) {
             JOptionPane.showMessageDialog(btndelete, "TERDAPAT DATA YANG KOSONG");
         } else {
             try {
