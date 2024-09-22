@@ -300,8 +300,6 @@ public class GUIMahasiswa extends javax.swing.JFrame {
         b = tfnim.getText();
         c = tfprodi.getText();
         d = tffakultas.getText();
-        
-        tfnama.setText("");
 
         if (a.trim().isEmpty() || b.trim().isEmpty() || c.trim().isEmpty()||d.trim().isEmpty()) {
             JOptionPane.showMessageDialog(btnupdate, "TERDAPAT FIELD YANG KOSONG");
