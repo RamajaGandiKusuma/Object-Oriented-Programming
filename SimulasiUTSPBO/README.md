@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/9a2e8130-3768-43ee-874a-7edba08d3eb8)# OPERASI CRUD (CREATE, READ, UPDATE, DELETE) 
+# OPERASI CRUD (CREATE, READ, UPDATE, DELETE) 
 ## Buatlah CRUD dengan Java Swing untuk entitas Buku dengan atribut: ISBN, Judul Buku, Tahun Terbit, Penerbit!
   Kasus ini merupakan salah satu tugas dalam soal simulasi UTS mata kuliah pemograman berorientasi objek
 
