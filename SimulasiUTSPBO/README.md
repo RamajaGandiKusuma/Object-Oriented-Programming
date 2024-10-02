@@ -45,4 +45,22 @@
   Button ini bertujuan untuk menghapus teks atau kalimat dalam field, dengan cara menginput pada field teks yang kosong tidak ada kata.
 
   ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-02%20215813.png)
+
+
+
+# HASIL
+## Input
+
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-02%20220343.png)
+
+## Update
+
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-02%20221046.png)
+
+## Delete
+
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-02%20221129.png)
+
+
+
    
