@@ -40,6 +40,27 @@
 
  ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-08%20135335.png)
 
+# Hasil
+  ## CREATE
+  
+ ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-09%20223730.png)
+
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-09%20223823.png)
+
+  ## UPDATE
+  
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-09%20224048.png)
+
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-09%20224230.png)
+
+  ## DELETE
+
+ ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-09%20224340.png)
+
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-09%20224520.png)
+
+ 
+
 
 
    
