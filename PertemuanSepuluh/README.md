@@ -11,7 +11,7 @@
 
 ## 2. Membuat Desain GUI
 
-  ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-08%20134615.png)
+  ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-26%20233457.png)
 
 
 ## 4. Membuat Method getAllData
