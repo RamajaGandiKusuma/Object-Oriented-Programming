@@ -1,6 +1,5 @@
-# OPERASI CRUD (CREATE, READ, UPDATE, DELETE) 
-## Buatlah CRUD dengan Java Swing untuk entitas Buku dengan atribut: ISBN, Judul Buku, Tahun Terbit, Penerbit!
-  Kasus ini merupakan salah satu tugas dalam soal UTS mata kuliah pemograman berorientasi objek
+# IREPORT
+## Buatlah CRUD dengan Java Swing kemudian lakukan report!
 
 ## Langkah - langkah
 ## 1. Membuat Method Database Connection Baru
@@ -38,6 +37,10 @@
 
  ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-08%20135335.png)
 
+## 8. Memberikan source code dalam button cetak agar data data yang ada dalam database dapat dicetak dalam report
+
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-27%20003032.png)
+
 # Hasil
   ## CREATE
   
@@ -56,6 +59,10 @@
  ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-09%20224340.png)
 
 ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-09%20224520.png)
+
+## CETAK
+
+![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-27%20003605.png)
 
  
 
