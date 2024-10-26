@@ -16,10 +16,8 @@
 
 ## 4. Membuat Method getAllData
   Pembuatan method ini bertujuan untuk menampilkan data - data dalam database ke dalam tabel dengan cara menyimpanya dalam arraylist kemudian dimasukan dalam method refreshModel untuk dihubungkan dengan tabel.
-
-  ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-02%20213407.png)
   
-  ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-02%20212830.png)
+  ![Alt text](https://github.com/RamajaGandiKusuma/Object-Oriented-Programming/blob/main/Pict%20GITHUB/Screenshot%202024-10-26%20233606.png)
 
   ## 4. Membuat Method refreshModel
   
